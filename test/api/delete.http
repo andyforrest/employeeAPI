@@ -1,0 +1,8 @@
+
+### Test DELETE request
+DELETE http://localhost:8888/employeeAPI/api/employee/delete.php
+Content-Type: application/json
+
+{
+  "id" : "3"
+}

@@ -121,4 +121,28 @@ class Employee{
         return false;
 
     }
+
+    //Delete Employee
+    public function delete(){
+        $query = 'DELETE FROM ' .$this->table . ' where id = :id';
+
+        //Prepare Statement
+        $stmt = $this->conn->prepare($query);
+
+        //Clean data
+        $this->id = htmlspecialchars(strip_tags($this->id));
+
+        //Bind data
+        $stmt->bindParam(':id', $this->id);
+
+        //Execute query
+        if($stmt->execute()){
+            return true;
+        }
+
+        //Print error is something goes wring
+        printf("Error: %s.\n", $stmt->error);
+
+        return false;
+    }
 }

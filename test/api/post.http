@@ -1,0 +1,10 @@
+### Send POST request
+POST http://localhost:8888/employeeAPI/api/employee/create.php
+Content-Type: application/json
+
+{
+  "firstname": "Joe",
+  "surname": "Bloggs",
+  "dob": "1990-06-15",
+  "salary": "100000"
+}

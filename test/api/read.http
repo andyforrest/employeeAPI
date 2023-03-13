@@ -1,0 +1,2 @@
+### Send GET request
+GET http://localhost:8888/employeeAPI/api/Employee/read.php

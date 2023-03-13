@@ -1,0 +1,11 @@
+### Send PUT request
+PUT http://localhost:8888/employeeAPI/api/employee/update.php
+Content-Type: application/json
+
+{
+  "firstname": "John",
+  "surname": "Gibson",
+  "dob": "2000-02-20",
+  "salary": "50000",
+  "id": "a"
+}

@@ -12,10 +12,11 @@ $database = new Database();
 $db = $database->connect();
 
 //Instantiate Employee object
-$read = new Employee($db);
+$emp = new Employee($db);
 
 //Query Employee
-$result = $read->read();
+$result = $emp->read();
+$result = $emp->read();
 //Get row count
 $num = $result->rowCount();
 

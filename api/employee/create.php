@@ -14,18 +14,18 @@ include_once '../../Models/Employee.php';
 $database = new Database();
 $db = $database->connect();
 
-$post = new Employee($db);
+$emp = new Employee($db);
 
 //Get raw data posted
 $data = json_decode(file_get_contents("php://input"));
 
-$post->firstname = $data->firstname;
-$post->surname = $data->surname;
-$post->dob = $data->dob;
-$post->salary = $data->salary;
+$emp->firstname = $data->firstname;
+$emp->surname = $data->surname;
+$emp->dob = $data->dob;
+$emp->salary = $data->salary;
 
 //POST employee
-if($post->create()){
+if($emp->create()){
     echo json_encode(
         array('message' => 'Employee added to database')
     );
